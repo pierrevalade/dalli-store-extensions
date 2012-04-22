@@ -7,7 +7,7 @@ class KeySet < Set
 
 
     if existing=@store.send(:read_entry, @store_key, {})
-      super(YAML.load(existing.value))
+      super(YAML.load(existing))
     else
       super([])
     end
